@@ -1,0 +1,12 @@
+clear;
+close all;
+load SG1.mat;
+A = [-Data(:) ones(length(Data(:)), 1)];
+B = log (DataMod(:));
+X = pinv(A)*B;
+colormap gray;
+imagesc(ImMod);
+Im = (log(ImMod) - X(2, 1))/-X(1, 1);
+colormap gray;
+imagesc(Im);
+RMSE =sqrt(mean((Im(:) - ImMod(:)).^2));
