@@ -316,7 +316,7 @@ void executer(cmdline cmd) {
                         // On crée un autre fils auxiliare
                         if((filsAux2 = fork()) == -1) {
                             perror("fork ");
-                            exit(75);
+                            exit(69);
                         }
                         if (filsAux2 == 0) {
                             close(p[0]);
