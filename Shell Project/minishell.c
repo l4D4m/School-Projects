@@ -362,7 +362,7 @@ void executer(cmdline cmd) {
 				if (cmd.seq[2] != NULL) {
 					close(p[1]);
 					close(p[0]);
-                    close(q[1]);
+                    			close(q[1]);
 					if (dup2(q[0], STDIN_FILENO) == -1) {perror("dup2 "); exit(88);}
 		            execvp(cmd.seq[2][0], cmd.seq[2]);
 		            perror("exec ");
