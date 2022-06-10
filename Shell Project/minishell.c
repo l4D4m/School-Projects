@@ -12,7 +12,7 @@
 
 /** Minishell
   * @author Adam Bouam
-  * @version 1.8
+  * @version 1.9
   */
  
 typedef struct cmdline cmdline;
