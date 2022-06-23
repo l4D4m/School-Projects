@@ -9,15 +9,15 @@ package Huffman is
    -- Liste contenant les arbres qui sont en cours de fusion en cle la frequence en racine de l'arbre
    package ARBRES is new LCA(T_Cle=>Integer , T_Donnee=> T_arbre) ;
 
-   -- Procedure qui calcul le codage de Huffman de chaque caractere a partir de l'arbre
+   -- Procedure qui calcule le codage de Huffman de chaque caractere a partir de l'arbre
    procedure Codage(arbre : in T_arbre ; sdaCode : in out CODES.T_LCA ; sdaBit : in out BITS.T_LCA);
 
-   -- Fonction qui retourne l'indice de l'arbre avec la frequence minimale à la racine
+   -- Fonction qui retourne l'indice de l'arbre avec la frequence minimale Ã  la racine
    function IndiceMin(sdaArbre : in ARBRES.T_LCA) return Integer with
      Pre => not ARBRES.Est_Vide(sdaArbre);
 
-   -- Fonction qui fait une fusion à la fois de deux arbres dans une liste des arbres et retourne une nouvelle
-   -- liste cette fois-ci de taille decrementée de 1
+   -- Fonction qui fait une fusion Ã  la fois de deux arbres dans une liste des arbres et retourne une nouvelle
+   -- liste cette fois-ci de taille decrementÃ©e de 1
    function postFusion(sdaArbre : in ARBRES.T_LCA) return ARBRES.T_LCA with
      Pre => not ARBRES.Est_Vide(sdaArbre);
 
